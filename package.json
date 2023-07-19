@@ -1,5 +1,5 @@
 {
-  "name": "after-class",
+  "name": "desafios",
   "version": "1.0.0",
   "description": "",
   "main": "ProductManager.js",
@@ -11,9 +11,9 @@
     "url": ""
   },
   "keywords": [],
-  "author": "",
+  "author": "Nico Cuccarese",
   "license": "ISC",
 
-  "homepage": "",
-  "type": "module"
+  "homepage": ""
+  
 }
