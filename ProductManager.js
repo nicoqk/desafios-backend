@@ -1,5 +1,3 @@
-
-// const fs = require ("fs");
 import fs from "fs";
 
 class ProductManager {
@@ -18,12 +16,57 @@ class ProductManager {
     addProduct(product) {
         if (this.validateCode(product.code)) {
             console.log("Error! Code exists!");
+
+            return false;
         } else {
-            const producto = {id:this.generateId(), title:product.title, description:product.description, price:product.price, thumbnail:product.thumbnail, code:product.code, stock:product.stock};
+            const producto = {id:this.generateId(), title:product.title, description:product.description, code:product.code, price:product.price, status:product.status, stock:product.stock, category:product.category, thumbnails:product.thumbnails};
             this.products = this.getProducts();
             this.products.push(producto);
             this.saveProducts();
             console.log("Product added!");
+
+            return true;
+        }
+    }
+
+    updateProduct(id, product) {
+        this.products = this.getProducts();
+        let pos = this.products.findIndex(item => item.id === id);
+
+        if (pos > -1) {
+            this.products[pos].title = product.title;
+            this.products[pos].description = product.description;
+            this.products[pos].code = product.code;
+            this.products[pos].price = product.price;
+            this.products[pos].status = product.status;
+            this.products[pos].stock = product.stock;
+            this.products[pos].category = product.category;
+            this.products[pos].thumbnails = product.thumbnails;
+            this.saveProducts();
+            console.log("Product updated!");
+
+            return true;
+        } else {
+            console.log("Not found!");
+
+            return false;
+        }
+    }
+
+    deleteProduct(id) {
+        this.products = this.getProducts();
+        let pos = this.products.findIndex(item => item.id === id);
+
+        if (pos > -1) {
+            this.products.splice(pos, 1); (0,1)
+            this.saveProducts();
+            console.log("Product #" + id + " deleted!");
+
+            return true;
+        } else {
+            console.log("Not found!");
+
+            return false;
         }
     }
 
@@ -45,8 +88,9 @@ class ProductManager {
 
     generateId() {
         let max = 0;
+        let products = this.getProducts();
 
-        this.products.forEach(item => {
+        products.forEach(item => {
             if (item.id > max) {
                 max = item.id;
             }
@@ -59,41 +103,11 @@ class ProductManager {
     saveProducts() {
         fs.writeFileSync(this.path, JSON.stringify(this.products));
     }
-
-
-    updateProduct(id, product) {
-        this.products = this.getProducts();
-        let pos = this.products.findIndex(item => item.id === id);
-
-        if (pos > -1) {
-            this.products[pos].title = product.title;
-            this.products[pos].description = product.description;
-            this.products[pos].price = product.price;
-            this.products[pos].thumbnail = product.thumbnail;
-            this.products[pos].code = product.code;
-            this.products[pos].stock = product.stock;
-            this.saveProducts();
-            console.log("Product updated!");
-        } else {
-            console.log("Not found!");
-        }
-
-    }
-
-    deleteProduct(id) {
-        this.products = this.getProducts();
-        let pos = this.products.findIndex(item => item.id === id);
-
-        if (pos > -1) {
-            this.products.splice(pos, 1); (0,1)
-            this.saveProducts();
-            console.log("Product #" + id + " deleted!");
-        } else {
-            console.log("Not found!");
-        }
-    }
-
 }
+
+
+
+
 
 
 
