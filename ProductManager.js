@@ -1,5 +1,7 @@
 
-const fs = require ("fs");
+// const fs = require ("fs");
+import fs from "fs";
+
 class ProductManager {
     constructor() {
         this.products = [];
@@ -113,3 +115,6 @@ PM.addProduct({title:"Guitarra Gibson SG", description:"SG Standar", price:3500,
 
 //PM.deleteProduct(1); //elimino productos por id
 //PM.updateProduct(2, {title:"Guitarra Fender Jaguar", description:"Jaguar", price:58990, thumbnail:"Sin imagen", code:"FJ", stock:18}) //actualizo productos
+
+
+export default ProductManager;

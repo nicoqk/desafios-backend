@@ -13,7 +13,8 @@
   "keywords": [],
   "author": "Nico Cuccarese",
   "license": "ISC",
-
-  "homepage": ""
-  
+  "homepage": "",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }

@@ -1,1 +1,7 @@
 [{"id":1,"title":"Guitarra Fender Telecaster","description":"Tele 52","price":3500,"thumbnail":"sin imagen","code":"TELE","stock":10},{"id":2,"title":"Guitarra Fender Stratocaster","description":"Start AVRI ","price":3000,"thumbnail":"sin imagen","code":"STRAT","stock":10},{"id":3,"title":"Guitarra Gibson Les Paul","description":"Les Paul Standar","price":3500,"thumbnail":"sin imagen","code":"LP","stock":10},{"id":4,"title":"Guitarra Gibson SG","description":"SG Standar","price":3500,"thumbnail":"sin imagen","code":"SG","stock":10}]
+{"id":5,"title":"Guitarra Gibson Explorer","description":"SG Standar","price":3500,"thumbnail":"sin imagen","code":"EXP","stock":10}]
+{"id":6,"title":"Guitarra Epiphone","description":"SG","price":1000,"thumbnail":"sin imagen","code":"EP","stock":10}]
+{"id":7,"title":"Guitarra Squier","description":"California","price":800,"thumbnail":"sin imagen","code":"SQC","stock":10}]
+{"id":8,"title":"Guitarra Fender Telecoustic","description":"Acustica","price":500,"thumbnail":"sin imagen","code":"TLA","stock":10}]
+{"id":9,"title":"Guitarra Jackson","description":"Jackson stantadr","price":3500,"thumbnail":"sin imagen","code":"JK","stock":10}]
+{"id":10,"title":"Guitarra PRS","description":"PRS USA","price":3500,"thumbnail":"sin imagen","code":"PRS","stock":10}]
